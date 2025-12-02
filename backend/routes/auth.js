@@ -39,7 +39,7 @@ router.get("/oauth-url", (req, res) => {
     `&state=${encodeURIComponent(state)}` +
     `&code_challenge=${encodeURIComponent(codeChallenge)}` +
     `&code_challenge_method=${encodeURIComponent(codeChallengeMethod)}`;
-
+  console.log(authorizationUrl);
   res.json({ url: authorizationUrl });
 })
 
